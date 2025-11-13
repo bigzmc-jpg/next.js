@@ -909,5 +909,6 @@
   "908": "Invalid flags should be run as node detached-flush dev ./path-to/project [eventsFile]",
   "909": "Failed to load SWC binary for %s/%s, see more info here: https://nextjs.org/docs/messages/failed-loading-swc",
   "910": "An unexpected error occurred while adjusting `_idleStart` on an atomic timer",
-  "911": "createAtomicTimerGroup cannot be called in the edge runtime"
+  "911": "createAtomicTimerGroup cannot be called in the edge runtime",
+  "912": "Cannot schedule more timers into a group that already executed"
 }
