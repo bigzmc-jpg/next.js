@@ -13,15 +13,15 @@ export async function spawnNextUpgrade(
 ) {
   const baseDir = getProjectDir(directory)
   const [upgradeProcessCommand, ...upgradeProcessDefaultArgs] =
-    getNpxCommand(baseDir)
+    getNpxCommand(baseDir).split(' ')
 
-  const upgradeProcessCommandArgs = upgradeProcessDefaultArgs.concat([
-    '--yes',
+  const upgradeProcessCommandArgs = [
+    ...upgradeProcessDefaultArgs,
     // Needs to be bleeding edge (canary) to pick up latest codemods.
     '@next/codemod@canary',
     'upgrade',
     options.revision,
-  ])
+  ]
   if (options.verbose) {
     upgradeProcessCommandArgs.push('--verbose')
   }

@@ -388,7 +388,7 @@ program
   )
   .usage('[directory] [options]')
   .option(
-    '--version',
+    '--revision <revision>',
     'Specify the target Next.js version using an NPM dist tag (e.g. "latest", "canary", "rc", "beta") or an exact version number (e.g. "15.0.0").',
     nextVersion.includes('-canary.')
       ? 'canary'
